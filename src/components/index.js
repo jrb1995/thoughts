@@ -1,7 +1,11 @@
 import Modal from './modal'
+import Collapse from './collapse'
+import CollapseItem from './collapse-item'
 
 const components = [
-  Modal
+  Modal,
+  Collapse,
+  CollapseItem
 ]
 
 const install = function (Vue) {
@@ -11,7 +15,9 @@ const install = function (Vue) {
 }
 
 export {
-  Modal
+  Modal,
+  Collapse,
+  CollapseItem
 }
 
 export default {
