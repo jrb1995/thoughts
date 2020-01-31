@@ -1,9 +1,8 @@
 <template>
-  <div class="m-modal" v-if="visible">
-    <p>pppppppp</p>
-    <p>pppppppp</p>
-    <p>pppppppp</p>
-    <p>pppppppp</p>
+  <div class="m-modal" v-if="visible" @click.self="handleWrapperClick">
+    <div class="m-modal-content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -40,6 +39,9 @@ export default {
       this.visible = false
       this.$emit('input', false)
       this.$emit('on-cancel')
+    },
+    handleWrapperClick () {
+      this.close()
     }
   },
   watch: {
@@ -48,7 +50,10 @@ export default {
       if (val) {
         if (this.transfer) {
           document.body.appendChild(this.$el)
+          document.body.style.overflow = 'hidden'
         }
+      } else {
+        document.body.style.overflow = ''
       }
     }
   }
@@ -60,6 +65,21 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 1050;
+  background-color: rgba(56,56,56,.5);
+
+  .m-modal-content {
+    // position: fixed;
+    // overflow: auto;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+    // z-index: 1100;
+    // box-sizing: border-box;
+  }
 }
 </style>

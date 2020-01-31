@@ -2,18 +2,22 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { getToken } from '@/util/app'
 
+import Home from '../views/home'
+import Case from '../views/case'
+
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "site" */ '../views/home')
+    component: Home
   },
   {
     path: '/case',
     name: 'case',
-    component: () => import(/* webpackChunkName: "site" */ '../views/case')
+    // component: () => import(/* webpackChunkName: "site" */ '../views/case')
+    component: Case
   }
 ]
 

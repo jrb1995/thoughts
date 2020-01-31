@@ -6,7 +6,10 @@
           class="logo"
           src="https://g.alicdn.com/thoughts/thoughts-site/image/thoughts_logo2.2904e6eb.svg"
         />
-        <!-- <img class="logo-type" src="https://g.alicdn.com/thoughts/thoughts-site/image/logo-type.2b20fd05.svg" /> -->
+        <img
+          class="logo-type"
+          src="https://g.alicdn.com/thoughts/thoughts-site/image/logo-type.2b20fd05.svg"
+        />
         <ul class="social">
           <li>
             <a href="javascript:;">
@@ -48,7 +51,7 @@
       </div>
       <div class="copyrights">
         <p>Copyright © 2013-2019 Teambition</p>
-        <p>沪 ICP 备 11014111 号-2</p>
+        <p class="small">沪 ICP 备 11014111 号-2</p>
         <p>
           <a
             target="_blank"
@@ -107,7 +110,9 @@
           <a href="https://apps.teambition.com">应用商店</a>
         </li>
         <li>
-          <a href="https://thoughts.teambition.com/sharespace/5dd39a5e8a05fe001424c358/folders/5dd39a5e8a05fe001424c357">最近更新</a>
+          <a
+            href="https://thoughts.teambition.com/sharespace/5dd39a5e8a05fe001424c358/folders/5dd39a5e8a05fe001424c357"
+          >最近更新</a>
         </li>
       </ul>
       <ul class="footer-nav-group">
@@ -160,11 +165,200 @@
         </li>
       </ul>
     </div>
+
+    <div class="footer-nav-m">
+      <div :class="['nav-group', active === 0 && 'collapse']" @click="toggle(0)">
+        <h4 class="group-head">
+          <span>产品</span>
+          <svg viewBox="0 0 16 16" class="group-head-decor">
+            <path
+              d="M3.233 5.917a.6.6 0 0 1 1.023-.424L8 9.235l3.742-3.742a.598.598 0 0 1 .848 0 .598.598 0 0 1 0 .848l-4.166 4.167a.601.601 0 0 1-.849 0L3.41 6.34a.6.6 0 0 1-.176-.424z"
+            />
+          </svg>
+        </h4>
+        <collapse-transition>
+          <div v-show="active === 0">
+            <ul>
+              <li class="group-item">
+                <a href="https://www.teambition.com/tour" class="item-link">Teambition</a>
+              </li>
+              <li class="group-item">
+                <a href="https://suosi.teambition.net" class="item-link">Thoughts</a>
+              </li>
+              <li class="group-item">
+                <a href="https://app-store.teambition.com/introduction/codeup" class="item-link">Codeup</a>
+              </li>
+              <li class="group-item">
+                <a href="https://app-store.teambition.com/introduction/flow" class="item-link">Flow</a>
+              </li>
+              <li class="group-item">
+                <a href="https://www.teambition.com/pricing" class="item-link">价格</a>
+              </li>
+              <li class="group-item">
+                <a href="https://suosi.teambition.net/site/download" class="item-link">下载</a>
+              </li>
+              <li class="group-item">
+                <a href="https://apps.teambition.com" class="item-link">应用商店</a>
+              </li>
+              <li class="group-item">
+                <a href="https://thoughts.teambition.com/sharespace/5dd39a5e8a05fe001424c358/folders/5dd39a5e8a05fe001424c357" class="item-link">最近更新</a>
+              </li>
+            </ul>
+          </div>
+        </collapse-transition>
+      </div>
+
+      <div :class="['nav-group', active === 1 && 'collapse']" @click="toggle(1)">
+        <h4 class="group-head">
+          <span>资源</span>
+          <svg viewBox="0 0 16 16" class="group-head-decor">
+            <path
+              d="M3.233 5.917a.6.6 0 0 1 1.023-.424L8 9.235l3.742-3.742a.598.598 0 0 1 .848 0 .598.598 0 0 1 0 .848l-4.166 4.167a.601.601 0 0 1-.849 0L3.41 6.34a.6.6 0 0 1-.176-.424z"
+            />
+          </svg>
+        </h4>
+        <collapse-transition>
+          <div v-show="active === 1">
+            <ul>
+              <li class="group-item">
+                <a href="https://thoughts.teambition.com/sharespace/5dd39a5e8a05fe001424c358" class="item-link">帮助中心</a>
+              </li>
+              <li class="group-item">
+                <a href="https://www.teambition.com/solution/all-in-one" class="item-link">解决方案</a>
+              </li>
+              <li class="group-item">
+                <a href="https://case.teambition.com/" class="item-link">案例中心</a>
+              </li>
+              <li class="group-item">
+                <a href="https://blog.teambition.com/zh/events" class="item-link">活动</a>
+              </li>
+              <li class="group-item">
+                <a href="https://blog.teambition.com/webinar" class="item-link">线上研讨会</a>
+              </li>
+            </ul>
+          </div>
+        </collapse-transition>
+      </div>
+
+      <div :class="['nav-group', active === 2 && 'collapse']" @click="toggle(2)">
+        <h4 class="group-head">
+          <span>开发者</span>
+          <svg viewBox="0 0 16 16" class="group-head-decor">
+            <path
+              d="M3.233 5.917a.6.6 0 0 1 1.023-.424L8 9.235l3.742-3.742a.598.598 0 0 1 .848 0 .598.598 0 0 1 0 .848l-4.166 4.167a.601.601 0 0 1-.849 0L3.41 6.34a.6.6 0 0 1-.176-.424z"
+            />
+          </svg>
+        </h4>
+        <collapse-transition>
+          <div v-show="active === 2">
+            <ul>
+              <li class="group-item">
+                <a href="https://help.teambition.com/" class="item-link">自助检查</a>
+              </li>
+              <li class="group-item">
+                <a href="http://status.teambition.net/" class="item-link">系统状态</a>
+              </li>
+              <li class="group-item">
+                <a href="https://open.teambition.com/app" class="item-link">开放平台</a>
+              </li>
+            </ul>
+          </div>
+        </collapse-transition>
+      </div>
+
+      <div :class="['nav-group', active === 3 && 'collapse']" @click="toggle(3)">
+        <h4 class="group-head">
+          <span>公司</span>
+          <svg viewBox="0 0 16 16" class="group-head-decor">
+            <path
+              d="M3.233 5.917a.6.6 0 0 1 1.023-.424L8 9.235l3.742-3.742a.598.598 0 0 1 .848 0 .598.598 0 0 1 0 .848l-4.166 4.167a.601.601 0 0 1-.849 0L3.41 6.34a.6.6 0 0 1-.176-.424z"
+            />
+          </svg>
+        </h4>
+        <collapse-transition>
+          <div v-show="active === 3">
+            <ul>
+              <li class="group-item">
+                <a href="https://www.teambition.com/info/about" class="item-link">关于我们</a>
+              </li>
+              <li class="group-item">
+                <a href="https://blog.teambition.com/zh/news" class="item-link">公司新闻</a>
+              </li>
+              <li class="group-item">
+                <a href="https://blog.teambition.com/zh/blog" class="item-link">博客</a>
+              </li>
+              <li class="group-item">
+                <a href="https://www.teambition.com/zh/careers" class="item-link">加入我们</a>
+              </li>
+              <li class="group-item">
+                <a href="https://www.teambition.com/info/partners" class="item-link">合作伙伴</a>
+              </li>
+            </ul>
+          </div>
+        </collapse-transition>
+      </div>
+
+      <div :class="['nav-group', active === 4 && 'collapse']" @click="toggle(4)">
+        <h4 class="group-head">
+          <span>联系我们</span>
+          <svg viewBox="0 0 16 16" class="group-head-decor">
+            <path
+              d="M3.233 5.917a.6.6 0 0 1 1.023-.424L8 9.235l3.742-3.742a.598.598 0 0 1 .848 0 .598.598 0 0 1 0 .848l-4.166 4.167a.601.601 0 0 1-.849 0L3.41 6.34a.6.6 0 0 1-.176-.424z"
+            />
+          </svg>
+        </h4>
+        <collapse-transition>
+          <div v-show="active === 4">
+            <ul>
+              <li class="group-item">
+                <a href="tel:00864000605576" class="item-link">电话：+86 400-060-5576</a>
+              </li>
+              <li class="group-item">
+                <a href="mailto:support@teambition.com" class="item-link">邮箱：support@teambition.com</a>
+              </li>
+              <li class="group-item">
+                <a href="https://case.teambition.com/" class="item-link">微信</a>
+              </li>
+              <li class="group-item">
+                <a href="https://blog.teambition.com/zh/events" class="item-link">新浪微博</a>
+              </li>
+              <li class="group-item">
+                <a href="https://blog.teambition.com/webinar" class="item-link">钉钉</a>
+              </li>
+              <li class="group-item">
+                <a href="https://dribbble.com/teambition" class="item-link">dribbble</a>
+              </li>
+            </ul>
+          </div>
+        </collapse-transition>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+import CollapseTransition from '@/util/collapse-transition'
+
+export default {
+  components: {
+    CollapseTransition
+  },
+  data () {
+    return {
+      options: [],
+      active: null
+    }
+  },
+  methods: {
+    toggle (name) {
+      if (this.active === name) {
+        this.active = null
+        return
+      }
+      this.active = name
+    }
+  }
+}
 </script>
 
 <style lang="less">
@@ -190,6 +384,12 @@ export default {}
       width: 36px;
       height: 33px;
       margin-bottom: 40px;
+    }
+
+    .logo-type {
+      display: none;
+      height: 18px;
+      margin-top: 32px;
     }
 
     .social {
@@ -267,6 +467,61 @@ export default {}
       }
     }
   }
+
+  .footer-nav-m {
+    display: none;
+
+    .nav-group {
+      width: auto;
+      margin: 0 16px;
+      box-shadow: 0 1px 0 #f5f5f5;
+
+      .group-head {
+        display: flex;
+        font-size: 1.15rem;
+        font-weight: 400;
+        line-height: 300%;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      .group-head:hover {
+        span {
+          color: #5c609e;
+        }
+
+        .group-head-decor {
+          fill: #5c609e;
+        }
+      }
+
+      .group-head-decor {
+        width: 14px;
+        height: 14px;
+        fill: grey;
+        transition: transform 0.28s ease;
+      }
+
+      .group-item {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 0 16px;
+
+        .item-link {
+          color: grey;
+          padding: 12px 0;
+        }
+      }
+    }
+
+    .collapse {
+      .group-head-decor {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
 
 .footer::after {
@@ -279,5 +534,51 @@ export default {}
   background-image: linear-gradient(90deg, #c1acff, #542cd1);
   z-index: -1;
   border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 43px 0 40px;
+    flex-direction: column-reverse;
+
+    .left {
+      max-width: 100%;
+      margin: 0 16px;
+      text-align: center;
+
+      .logo {
+        display: none;
+      }
+
+      .logo-type {
+        display: inline;
+      }
+
+      .social {
+        display: none;
+      }
+
+      .copyrights {
+        margin-top: 32px;
+        p.small {
+          line-height: 100%;
+        }
+      }
+    }
+
+    .footer-nav {
+      display: none;
+    }
+
+    .footer-nav-m {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer:after {
+    margin: 0 2%;
+    width: 96%;
+  }
 }
 </style>

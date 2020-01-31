@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
 
-    <router-view />
+    <router-view class="content" />
 
     <Footer />
   </div>
@@ -21,5 +21,8 @@ export default {
 </script>
 
 <style lang="less">
-
+.content {
+  max-width: 1440px;
+  margin: 0 auto 60px;
+}
 </style>
