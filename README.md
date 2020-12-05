@@ -1,6 +1,6 @@
 # 介绍
 
-仿 [Thoughts](https://thoughts.teambition.com/site) 的练习项目，demo 可见 [https://jrb1995.github.io/thoughts](https://jrb1995.github.io/thoughts)
+仿 [Thoughts](https://thoughts.teambition.com/site) 的练习项目，demo 可见 [https://jiangrubin.github.io/thoughts/](https://jiangrubin.github.io/thoughts/#/)
 
 ### Project setup
 
